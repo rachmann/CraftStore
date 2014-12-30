@@ -1,0 +1,141 @@
+h1 {
+	color: rgb(255, 102, 102);
+}
+h2 {
+	color: rgb(255, 102, 102);
+}
+h3 {
+	color: rgb(255, 102, 102);
+}
+h4 {
+	color: rgb(255, 102, 102);
+}
+h5 {
+	color: rgb(255, 102, 102);
+}
+h6 {
+	color: rgb(255, 102, 102);
+}
+a:hover {
+	color: rgb(255, 102, 102);
+}
+.sidebar-style .logo i {
+	color: rgb(255, 102, 102);
+}
+.btn-red-pastel {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); color: rgb(255, 255, 255); text-shadow: 0px -1px 0px rgba(0,0,0,0.25); background-image: linear-gradient(rgb(255, 102, 102), rgb(255, 68, 68)); background-repeat: repeat-x; background-color: rgb(255, 68, 68);
+}
+.btn-red-pastel:hover {
+	color: rgb(255, 255, 255); background-color: rgb(255, 68, 68);
+}
+.btn-red-pastel:active {
+	color: rgb(255, 255, 255); background-color: rgb(255, 68, 68);
+}
+.active.btn-red-pastel {
+	color: rgb(255, 255, 255); background-color: rgb(255, 68, 68);
+}
+.disabled.btn-red-pastel {
+	color: rgb(255, 255, 255); background-color: rgb(255, 68, 68);
+}
+[disabled].btn-red-pastel {
+	color: rgb(255, 255, 255); background-color: rgb(255, 68, 68);
+}
+.home-features .icon {
+	color: rgb(255, 102, 102);
+}
+.sidebar-right .sidebar-tag {
+	background: 0px 0px rgb(255, 102, 102);
+}
+.sidebar-right .sidebar-tag:hover {
+	background: 0px 0px rgb(255, 68, 68);
+}
+.blog .marker {
+	color: rgb(255, 102, 102);
+}
+.icon-muted {
+	color: rgb(255, 102, 102);
+}
+.icon-border {
+	border-color: rgb(255, 102, 102);
+}
+.knob input {
+	color: rgb(255, 102, 102);
+}
+.tag-css a {
+	background: 0px 0px rgb(78, 78, 78); color: rgb(255, 255, 255);
+}
+.tag-css a::before {
+	border-color: transparent rgb(78, 78, 78) transparent transparent;
+}
+.tag-css a::after {
+	background: 0px 0px rgb(255, 255, 255);
+}
+.tag-css a:hover {
+	background: 0px 0px rgb(255, 102, 102); color: rgb(255, 255, 255);
+}
+.tag-css a:hover::before {
+	border-color: transparent rgb(255, 102, 102) transparent transparent; color: rgb(255, 255, 255);
+}
+.tag-css a:active {
+	background: 0px 0px rgb(255, 68, 68); color: rgb(255, 255, 255);
+}
+.tag-css a:active::before {
+	border-color: transparent rgb(255, 68, 68) transparent transparent; color: rgb(255, 255, 255);
+}
+.content-contact .title i {
+	color: rgb(255, 102, 102);
+}
+.input-append .add-on {
+	background-color: rgb(255, 102, 102);
+}
+.input-prepend .add-on {
+	background-color: rgb(255, 102, 102);
+}
+textarea:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='text']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='password']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='datetime']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='datetime-local']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='date']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='month']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='time']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='week']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='number']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='email']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='url']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='search']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='tel']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+input[type='color']:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}
+.uneditable-input:focus {
+	border-color: rgba(255, 102, 102, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255,102,102,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 102, 0.6);
+}

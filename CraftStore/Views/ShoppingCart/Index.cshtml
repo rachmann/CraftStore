@@ -1,0 +1,165 @@
+﻿@model CraftStore.Models.ShoppingCartViewModel
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<style type="text/css">
+
+</style>
+<div class="container">
+    <h2>Product Catalog</h2>
+</div>
+<br />
+<hr />
+<br />
+<section id="sc-wrap">
+    <!-- Begin page content -->
+    <div class="container full">
+        <div class="row">
+
+            <div class="col-lg-9">
+                    @Html.Partial("_Catalog", Model)
+            </div>
+
+            <div class="col-lg-3  right">
+                <div class="sc-panel">
+                    @* TODO: move to partial view as a control *@
+                    <div class="sc-tool sc-cart-summary" id="sc-cart-summary">
+                        <h4>Cart</h4>
+                        <div class="sc-cart-content">
+                            <ul >
+                                @if (Model.CartItems.Any())
+                                {
+                                    <li class="sc-cart-item empty">No products in the cart.</li>
+                                }
+                                else
+                                {
+                                    foreach (var oItem in Model.CartItems)
+                                    {
+                                        <li class="sc-cart-item">
+                                            <a title="@oItem.Name" href="@Html.Action("Details", "ShoppingCart", new { id = oItem.ItemId})">
+                                                @{ var imagePathThumb = string.Format("~/Content/Images/Products/{0}", oItem.Image);}
+                                                <img width="90" height="90" class="sc-image-thumbnail" alt="@oItem.Name" src="@Url.Content(@imagePathThumb)">
+                                            </a>
+                                            <span class="sc-price"><span class="sc-amount">@oItem.Price.ToString("C")</span></span>
+                                        </li>
+                                    }
+                                }
+
+                            </ul><!-- end product list -->
+                            <p class="sc-total">Subtotal: <span class="sc-amount">@Model.CartItems.Sum(c => c.Quantity * c.Price).ToString("C")</span></p>
+                            <p class="buttons">
+                                <a href="@Url.Action("Cart", "ShoppingCart")" class="button sc-forward">View Cart @FontAwesomeIconSet.ArrowRight.Html</a>
+                                <a href="@Url.Action("Checkout", "ShoppingCart")" class="button sc-forward">Checkout @FontAwesomeIconSet.ArrowRight.Html</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sc-tool sc_price_filter" id="price_filter_box">
+                        <form method="get" id="formPriceFilter" action="@Url.Action("Index", "ShoppingCart")" data-pf-ajax="true" data-filter-target="#productList">
+                            <input type="hidden" id="filterLowPrice" />
+                            <input type="hidden" id="filterHighPrice" />
+                            <input type="hidden" id="filterCategory" />
+                            <h4 class="sc-title">Product Categories</h4>
+                            @Html.ListBox("categoryList", Model.Categories)
+                            <h4 class="sc-title">Filter by price</h4>
+                            <h5>
+                                <label class="sc-text" for="amount-filter">Price range:</label>
+                                <input class="sc-text" type="text" id="amount-filter" readonly />
+                            </h5>
+                            <div class="slider-bucket">
+                                <div id="slider-range-price"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sc-tool sc-other-products" id="sc-other-products">
+                        <h6 class="sc-title">What others bought</h6>
+                        <ul class="sc-product_list">
+                            @foreach (var oItem in Model.WhatOthersBought)
+                            {
+                                <li>
+                                    <a title="@oItem.Name" href="@Html.Action("Details", "ShoppingCart", new { id = oItem.Id})">
+                                        @{ var imagePathThumb = string.Format("~/Content/Images/Products/{0}", oItem.Image);}
+                                        <img width="90" height="90" class="sc-image-thumbnail" alt="@oItem.Name" src="@Url.Content(@imagePathThumb)">
+                                    </a>
+                                    @if (oItem.DiscountPrice > 0)
+                                    {
+                                        <span class="sc-price"><del><span class="sc-amount">@oItem.Price.ToString("C")</span></del> <ins><span class="sc-amount">@oItem.DiscountPrice.ToString("C")</span></ins></span>
+                                    }
+                                    else
+                                    {
+                                        <span class="sc-price"><span class="sc-amount">@oItem.Price.ToString("C")</span></span>
+                                    }
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- Row page -->
+    </div><!-- Content page -->
+</section>
+@section Scripts
+{
+    <script type="text/javascript">
+        $(function () {
+
+            $("#categoryList").change(function () {
+                $("#filterCategory").val(this.value);
+                $("#formPriceFilter").submit();
+            });
+            // Document.ready -> initialize price filter
+            $("#slider-range-price").slider({
+                range: true,
+                min: 0,
+                max: 5000,
+                values: [0, 5000],
+                slide: function (event, ui) {
+                    $("#amount-filter").val("$" + ui.values[0] + " - $" + ui.values[1]);
+
+                },
+                change: function (event, ui) {
+                    $("#filterLowPrice").val(ui.values[0]);
+                    $("#filterHighPrice").val(ui.values[1]);
+                    $("#formPriceFilter").submit();
+                }
+
+            });
+
+            $("#amount-filter").val("$" + $("#slider-range-price").slider("values", 0) +
+              " - $" + $("#slider-range-price").slider("values", 1));
+
+            // Document.ready -> link up remove event handler
+            $(".RemoveLink").click(function () {
+                // Get the id from the link
+                var recordToDelete = $(this).attr("data-id");
+                if (recordToDelete != '') {
+                    // Perform the ajax post
+                    $.post("/ShoppingCart/RemoveFromCart", { "id": recordToDelete },
+                        function (data) {
+                            // Successful requests get here
+                            // Update the page elements
+                            if (data.ItemCount == 0) {
+                                $('#row-' + data.DeleteId).fadeOut('slow');
+                            } else {
+                                $('#item-count-' + data.DeleteId).text(data.ItemCount);
+                            }
+                            $('#cart-total').text(data.CartTotal);
+                            $('#update-message').text(data.Message);
+                            $('#cart-status').text('Cart (' + data.CartCount + ')');
+                        });
+                }
+            });
+
+            // Document.ready -> initialize animations
+            if (document.getElementById('grid') != null) {
+                new AnimOnScroll(document.getElementById('grid'), {
+                    minDuration: 0.4,
+                    maxDuration: 0.7,
+                    viewportFactor: 0.2
+                });
+            }
+        });
+</script>
+}

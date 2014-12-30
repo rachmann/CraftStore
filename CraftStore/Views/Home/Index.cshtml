@@ -1,0 +1,128 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- WELCOME SECTION -->
+<div class="container">
+    <div class="row mt">
+        <div class="col-lg-8">
+            <h1>We build websites & apps that people love!</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        </div>
+        <div class="col-lg-4">
+            <p class="pull-right"><br><button type="button" class="btn btn-green">Start Your Project Now</button></p>
+        </div>
+    </div><!-- /row -->
+</div><!-- /.container -->
+<!-- PORTFOLIO SECTION -->
+<div id="portfolio">
+    <div class="container">
+        <div class="row mt">
+            <ul class="grid effect-2" id="grid">
+                <li><a href="@Url.Action("Details", "Home", new{ id=1 })"><img alt="" src="@Url.Content("~/Content/Images/1.jpg")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=3 })"><img alt="" src="@Url.Content("~/Content/Images/3.jpg")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=4 })"><img alt="" src="@Url.Content("~/Content/Images/4.jpg")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=12 })"><img alt="" src="@Url.Content("~/Content/Images/12.png")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=13 })"><img alt="" src="@Url.Content("~/Content/Images/13.png")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=10 })"><img alt="" src="@Url.Content("~/Content/Images/10.png")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=9 })"><img alt="" src="@Url.Content("~/Content/Images/9.jpg")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=2 })"><img alt="" src="@Url.Content("~/Content/Images/2.jpg")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=14 })"><img alt="" src="@Url.Content("~/Content/Images/14.png")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=5 })"><img alt="" src="@Url.Content("~/Content/Images/5.jpg")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=6 })"><img alt="" src="@Url.Content("~/Content/Images/6.jpg")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=7 })"><img alt="" src="@Url.Content("~/Content/Images/7.jpg")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=6 })"><img alt="" src="@Url.Content("~/Content/Images/6.jpg")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=9 })"><img alt="" src="@Url.Content("~/Content/Images/9.jpg")"></a></li>
+                <li><a href="@Url.Action("Details", "Home", new{ id=11 })"><img alt="" src="@Url.Content("~/Content/Images/11.png")"></a></li>
+            </ul>
+        </div><!-- row -->
+    </div><!-- container -->
+</div><!-- portfolio -->
+<!-- SERVICES SECTION -->
+<div id="services">
+    <div class="container">
+        <div class="row mt">
+            <div class="col-lg-1 centered">
+                @FontAwesomeIconSet.Certificate.Html
+            </div>
+            <div class="col-lg-3">
+                <h3>Quality Design</h3>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+            <div class="col-lg-1 centered">
+                @FontAwesomeIconSet.QuestionCircle.Html
+            </div>
+            <div class="col-lg-3">
+                <h3>Awesome Support</h3>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+
+
+            <div class="col-lg-1 centered">
+                @FontAwesomeIconSet.Globe.Html
+            </div>
+            <div class="col-lg-3">
+                <h3>Global Services</h3>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+
+        </div><!-- row -->
+    </div><!-- container -->
+</div><!-- services section -->
+<!-- BLOG POSTS -->
+<div class="container">
+    <div class="row mt">
+        <div class="col-lg-12">
+            <h1>Recent Posts</h1>
+        </div><!-- col-lg-12 -->
+        <div class="col-lg-8">
+            <p>Our latests thoughts about things that only matters to us.</p>
+        </div><!-- col-lg-8-->
+        <div class="col-lg-4 goright">
+            <p><a href="#">@FontAwesomeIconSet.AngleRight.Html see all posts</a></p>
+        </div>
+    </div><!-- row -->
+
+    <div class="row mt">
+        <div class="col-lg-4">
+            <img class="img-responsive" src="@Url.Content("~/Content/images/post01.jpg")" alt="">
+            <h3><a href="#">Designing for the reader experience</a></h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <p><a href="#">@FontAwesomeIconSet.Link.Html Read More</a></p>
+        </div>
+        <div class="col-lg-4">
+            <img class="img-responsive" src="@Url.Content("~/Content/images/post02.jpg")" alt="">
+            <h3><a href="#">25 Examples of flat web & application design</a></h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <p><a href="#">@FontAwesomeIconSet.Link.Html Read More</a></p>
+        </div>
+        <div class="col-lg-4">
+            <img class="img-responsive" src="@Url.Content("~/Content/images/post03.jpg")" alt="">
+            <h3><a href="#">We are an award winning design agency</a></h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <p><a href="#">@FontAwesomeIconSet.Link.Html Read More</a></p>
+        </div>
+    </div><!-- row -->
+</div><!-- container -->
+<!-- CLIENTS LOGOS -->
+<div id="lg">
+    <div class="container">
+        <div class="row centered">
+            <div class="col-lg-2 col-lg-offset-1">
+                <img alt="" src="@Url.Content("~/Content/images/Clients/c01.gif")" >
+            </div>
+            <div class="col-lg-2">
+                <img alt="" src="@Url.Content("~/Content/images/Clients/c02.gif")">
+            </div>
+            <div class="col-lg-2">
+                <img alt="" src="@Url.Content("~/Content/images/Clients/c03.gif")">
+            </div>
+            <div class="col-lg-2">
+                <img alt="" src="@Url.Content("~/Content/images/Clients/c04.gif")">
+            </div>
+            <div class="col-lg-2">
+                <img alt="" src="@Url.Content("~/Content/images/Clients/c05.gif")">
+            </div>
+        </div><!-- row -->
+    </div><!-- container -->
+</div><!-- dg -->

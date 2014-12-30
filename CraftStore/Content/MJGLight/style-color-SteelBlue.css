@@ -1,0 +1,141 @@
+h1 {
+	color: rgb(70, 130, 180);
+}
+h2 {
+	color: rgb(70, 130, 180);
+}
+h3 {
+	color: rgb(70, 130, 180);
+}
+h4 {
+	color: rgb(70, 130, 180);
+}
+h5 {
+	color: rgb(70, 130, 180);
+}
+h6 {
+	color: rgb(70, 130, 180);
+}
+a:hover {
+	color: rgb(70, 130, 180);
+}
+.sidebar-style .logo i {
+	color: rgb(70, 130, 180);
+}
+.btn-steelblue {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); color: rgb(255, 255, 255); text-shadow: 0px -1px 0px rgba(0,0,0,0.25); background-image: linear-gradient(rgb(70, 130, 180), rgb(60, 112, 156)); background-repeat: repeat-x; background-color: rgb(60, 112, 156);
+}
+.btn-steelblue:hover {
+	color: rgb(255, 255, 255); background-color: rgb(60, 112, 156);
+}
+.btn-steelblue:active {
+	color: rgb(255, 255, 255); background-color: rgb(60, 112, 156);
+}
+.active.btn-steelblue {
+	color: rgb(255, 255, 255); background-color: rgb(60, 112, 156);
+}
+.disabled.btn-steelblue {
+	color: rgb(255, 255, 255); background-color: rgb(60, 112, 156);
+}
+[disabled].btn-steelblue {
+	color: rgb(255, 255, 255); background-color: rgb(60, 112, 156);
+}
+.home-features .icon {
+	color: rgb(70, 130, 180);
+}
+.blog .marker {
+	color: rgb(70, 130, 180);
+}
+.icon-muted {
+	color: rgb(70, 130, 180);
+}
+.icon-border {
+	border-color: rgb(70, 130, 180);
+}
+.knob input {
+	color: rgb(70, 130, 180);
+}
+.tag-css a {
+	background: 0px 0px rgb(78, 78, 78); color: rgb(255, 255, 255);
+}
+.tag-css a::before {
+	border-color: transparent rgb(78, 78, 78) transparent transparent;
+}
+.tag-css a::after {
+	background: 0px 0px rgb(255, 255, 255);
+}
+.tag-css a:hover {
+	background: 0px 0px rgb(70, 130, 180); color: rgb(255, 255, 255);
+}
+.tag-css a:hover::before {
+	border-color: transparent rgb(70, 130, 180) transparent transparent; color: rgb(255, 255, 255);
+}
+.tag-css a:active {
+	background: 0px 0px rgb(60, 112, 156); color: rgb(255, 255, 255);
+}
+.tag-css a:active::before {
+	border-color: transparent rgb(60, 112, 156) transparent transparent; color: rgb(255, 255, 255);
+}
+.content-contact .title i {
+	color: rgb(70, 130, 180);
+}
+.input-append .add-on {
+	background-color: rgb(70, 130, 180);
+}
+.input-prepend .add-on {
+	background-color: rgb(70, 130, 180);
+}
+textarea:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='text']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='password']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='datetime']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='datetime-local']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='date']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='month']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='time']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='week']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='number']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='email']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='url']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='search']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='tel']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+input[type='color']:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+.uneditable-input:focus {
+	border-color: rgba(70, 130, 180, 0.6); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(70,130,180,0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(70, 130, 180, 0.6);
+}
+.sidebar-right .sidebar-tag {
+	background: 0px 0px rgb(70, 130, 180);
+}
+.sidebar-right .sidebar-tag:hover {
+	background: 0px 0px rgb(60, 112, 156);
+}

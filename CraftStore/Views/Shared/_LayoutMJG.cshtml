@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - MJG Gallery</title>
+
+    @Styles.Render("~/Content/cssMJG")
+
+    <link href='https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400,300,700,300italic' rel='stylesheet' type='text/css'>
+
+    @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript">
+        function stopvid() {
+            var mediaElement = document.getElementsByClassName("myMediaElementID");
+            mediaElement.each(function() {
+                $( this ).pause();
+                $(this).removeAttribute("src");
+                //or
+                //$(this).src = '';
+            });
+        }
+    </script>
+</head>
+<body >
+
+    <div class="background-image-overlay"></div>
+
+    <div id="outer-background-container" data-default-background-img='@Url.Content("~/Content/Images/bg5.jpg")' style="background: none repeat scroll 0% 0% transparent; position: fixed; z-index: -2;">
+        <div style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 287px; width: 1366px; z-index: -999998; position: absolute;" class="backstretch">
+            <img src='@Url.Content("~/Content/Images/bg5.jpg")' style="position: absolute; margin: 0px; padding: 0px; border: medium none; width: 1349px; height: 758.604px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -44.8022px;" alt=""/>
+        </div>
+    </div>
+
+    <div id="outer-container">
+        <video autoplay="autoplay" width="100%" height="auto" id="bgVideo" poster="@Url.Content("~/Content/Video/placeholder.png")" loop="loop" controls>
+
+            <source class="myMediaElement" type="video/mp4" src='@Url.Content("~/Content/Video/mjg.mp4")'>
+            <source class="myMediaElement" type="video/webm" src='@Url.Content("~/Content/Video/mjg.webm")'>
+            <span data-sfref="[images|OpenAccessDataProvider]9555a2ae-822d-4802-9db4-76ee82104faa" class="sfImageWrapper">
+                <img style="width:100%; height:auto" src='@Url.Content("~/Content/Video/placeholder.png")?sfvrsn=2' displaymode="Original" alt="" />
+            </span>
+
+        </video>
+        <section id="left-sidebar">
+
+            <div class="logo">
+                <a href="#intro" class="link-scroll"><img src='@Url.Content("~/Content/Images/mjglogo.png")' width="120" alt="MJG Gallery" /></a>
+            </div>
+            <div id="mobile-menu-icon" class="visible-xs" onclick="toggle_main_menu();"><span class="glyphicon glyphicon-th"></span></div>
+
+            <ul id="main-menu">
+                <li id="menu-item-text" class="menu-item scroll"><a href="#text">About</a></li>
+                <li id="menu-item-carousel" class="menu-item scroll"><a href="#carousel">Index</a></li>
+                <li id="menu-item-featured" class="menu-item scroll"><a href="#featured">Featured</a></li>
+                <li id="menu-item-grid" class="menu-item scroll"><a href="#blog">Blog</a></li>
+                <li id="menu-item-contact" class="menu-item scroll"><a href="#contact">Contact</a></li>
+            </ul>
+
+        </section>
+
+        <section id="main-content" class="clearfix">
+
+            <article id="intro" class="section-wrapper clearfix active" data-custom-background-img='@Url.Content("~/Content/Images/bg5.jpg")'>
+                <div style="position: absolute; visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;" class="content-wrapper clearfix wow fadeInDown animated" data-wow-delay="0.3s">
+
+                    <div class="col-sm-10 col-md-9 pull-right">
+                        <h1>MJG Gallery</h1>
+                        <section class="feature-text">
+                            <br /><br />
+                            <p>MJG Gallery houses the paintings and photographic works of gallery creator, Mark Jeremy Gleberzon. Works by other select artists are also featured. MJG caters to Cabbagetown collectors in search of creative and well-executed art to adorn their homes. In-studio workshops and art history lectures are offered.</p>
+                            <p><a href="#text" class="link-scroll btn btn-outline-inverse btn-lg">find out more</a></p>
+                        </section>
+
+                    </div>
+                </div>
+            </article>
+
+            <article id="text" class="section-wrapper clearfix" data-custom-background-img='@Url.Content("~/Content/Images/bg1.jpg")'>
+                <div style="position: absolute;" class="content-wrapper clearfix">
+                    <div class="col-sm-10 col-md-9 pull-right">
+
+                        <h1 class="section-title">Text Content</h1>
+
+                        <p class="feature-paragraph"><img src='@Url.Content("~/Content/Images/transp-image5b.png")' class="pull-right" alt="" />Our World. Our Pasion. Our Art. Our Life.</p>
+                        <h4>A work in progress</h4>
+                        <p>
+                            Hippity Hop. Rush over and stop. Have a pop. Look and shop. Get away with a steal. Look out for cop.
+                        </p>
+                        <p><a href="" onclick="populate_and_open_modal(event, 'modal-content-1');" class="btn btn-outline-inverse btn-sm">read more</a></p>
+
+                        @RenderBody()
+
+                    </div>
+                </div>
+            </article>
+
+            <article id="carousel" class="section-wrapper clearfix" data-custom-background-img='@Url.Content("~/Content/Images/bg6.jpg")'>
+                <div style="position: absolute; height: 70%;" class="content-wrapper clearfix">
+
+                    <div id="features-carousel" class="carousel slide with-title-indicators max-height" data-height-percent="70" data-ride="carousel">
+
+                        <ol class="carousel-indicators title-indicators">
+                            <li data-target="#features-carousel" data-slide-to="0" class="">The Studio</li>
+                            <li class="active" data-target="#features-carousel" data-slide-to="1">Artists</li>
+                            <li class="" data-target="#features-carousel" data-slide-to="2">Photography</li>
+                            <li class="" data-target="#features-carousel" data-slide-to="3">Paint / Media</li>
+                        </ol>
+
+
+                        <div class="carousel-inner">
+
+                            <div style="" class="item">
+                                <div style="height: 100%;" class="carousel-text-content">
+                                    <img src='@Url.Content("~/Content/Images/transp-image1.png")' class="icon" alt="" />
+                                    <h2 class="title">The Studio</h2>
+                                    <p>
+                                        Welcome. Why the studio? Why the art? What is this place?
+                                    </p>
+                                    <p><a href="" onclick="populate_and_open_modal(event, 'modal-content-1');" class="btn btn-outline-inverse btn-sm">read more</a></p>
+
+                                    <div class="content-to-populate-in-modal" id="modal-content-1">
+                                        <h1>Carousel Record: Studio</h1>
+                                        <p><img src='@Url.Content("~/Content/Images/transp-image1.png")' class="rounded_border hover_effect pull-left" alt="" />A sentence about studio. Some more words about studio. <a href="#">A link to some studio stuff</a>, and more info. </p>
+                                        <p>Another paragraph about studio. Fun eh?</p>
+                                        <p>
+                                            Here again, no poetry about studio.
+                                            Frum frum Studio
+                                            Don't molest the studio.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="" class="item active">
+                                <div style="height: 100%;" class="carousel-text-content">
+                                    <img src='@Url.Content("~/Content/Images/transp-image7.png")' class="icon" alt=""/>
+                                    <h2 class="title">Artists</h2>
+                                    <p>
+                                        Review and select art by artist.
+                                    </p>
+                                    <p><a href="" onclick="populate_and_open_modal(event, 'modal-content-2');" class="btn btn-outline-inverse btn-sm">read more</a></p>
+
+                                    <div class="content-to-populate-in-modal" id="modal-content-2">
+                                        <h1>Wonderful Artists</h1>
+                                        <p><img src='@Url.Content("~/Content/Images/transp-image7.png")' class="rounded_border hover_effect pull-left" alt=""/>Are you an artist? Check these guys out! Holy cow, serious artists<a href="#">on another wavelength</a>, and dimension. </p>
+                                        <p>More artist information. Perhaps some details here about artists</p>
+                                        <p>
+                                            More latin peotry about artists.
+                                            Sorta like kung pow chicken for artists
+                                            Don't molest the artists.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="" class="item">
+                                <div style="height: 100%;" class="carousel-text-content">
+                                    <img src='@Url.Content("~/Content/Images/transp-image6.png")' class="icon" alt=""/>
+                                    <h2 class="title">Photography</h2>
+                                    <p>
+                                        Here are windows on the world from various artists. Captured life from their viewpoint.
+                                    </p>
+                                    <p><a href="" onclick="populate_and_open_modal(event, 'modal-content-3');" class="btn btn-outline-inverse btn-sm">read more</a></p>
+
+                                    <div class="content-to-populate-in-modal" id="modal-content-3">
+                                        <h1>Photos that be</h1>
+                                        <p><img src='@Url.Content("~/Content/Images/transp-image6.png")' data-img-src="assets/images/other_images/transp-image6.png" class="rounded_border hover_effect pull-left" alt=""/>Here is the information about photos. Neat stuff here. I can't take photos like that. <a href="#">Suspend your photos over here</a>, sit an enjoy them. </p>
+                                        <p>Photo information. Don't worry, lots to talk about suspending photos when you want to molest them. Remember, just don't molest the images, Lorem,  nor do I, sit ahmen.</p>
+                                        <p>
+                                            Suspend the picture molesting, Lorem! Sit ahmen.
+                                            More lines to talk about photos.
+                                            And don't sit to molest the photos!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="" class="item">
+                                <div style="height: 100%;" class="carousel-text-content">
+                                    <img src='@Url.Content("~/Content/Images/transp-image4.png")' class="icon" alt=""/>
+                                    <h2 class="title">Paint / Media</h2>
+                                    <p>
+                                        Select art by paintings, drawings and other creations by hand.
+                                    </p>
+                                    <p><a href="" onclick="populate_and_open_modal(event, 'modal-content-4');" class="btn btn-outline-inverse btn-sm">read more</a></p>
+
+                                    <div class="content-to-populate-in-modal" id="modal-content-4">
+                                        <h1>Paint / Media</h1>
+                                        <p><img src='@Url.Content("~/Content/Images/transp-image4.png")' class="rounded_border hover_effect pull-left" alt=""/>Paint and media information. Want to know about paint and media? Now you do! <a href="#">Suspend molesting paint, Lorem</a>, just sit Ahmed.</p>
+                                        <p>Paint and other items of various hand done media.</p>
+                                        <p>
+                                            Paint and Media poetry.
+                                            Lorum didn't see the media, but for the paintings in the way.
+                                            Suspend molestiing paintings! Don't test me.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a class="left carousel-control" href="#features-carousel" data-slide="prev"></a>
+                        <a class="right carousel-control" href="#features-carousel" data-slide="next"></a>
+
+                    </div>
+
+                </div>
+            </article>
+
+            <article id="featured" class="section-wrapper clearfix" data-custom-background-img='@Url.Content("~/Content/Images/bg3.jpg")'>
+                <div style="position: absolute;" class="content-wrapper clearfix">
+                    <div class="col-sm-11 pull-right">
+
+                        <h1 class="section-title">Featured</h1>
+
+                        <section class="feature-columns row clearfix">
+
+                            <article class="feature-col col-md-4">
+                                <a href="" onclick="populate_and_open_modal(event, 'modal-content-5');" class="thumbnail linked">
+                                    <div class="image-container">
+                                        <img src='@Url.Content("~/Content/Images/project-3.jpg")' data-img-src='@Url.Content("~/Content/Images/project-3.jpg")' class="item-thumbnail" alt="Featured"/>
+                                    </div>
+                                    <div class="caption">
+                                        <h5>Feature Item 1</h5>
+                                        <p>This feature contains an image carousel when you open popup.</p>
+                                    </div>
+                                </a>
+
+                                <div class="content-to-populate-in-modal" id="modal-content-5">
+                                    <h1>First Feature from DB</h1>
+                                    <p>This could be a random feature item from the db.<br/></p>
+
+
+                                    <div id="unique-id-for-image-slider" class="owl-carousel popup-image-gallery">
+
+                                        <div>
+
+                                            <h6 class="caption">Caption for Image 1</h6>
+                                            <img class="lazyOwl" data-src='@Url.Content("~/Content/Images/bg1.jpg")' alt="" />
+                                        </div>
+
+                                        <div>
+                                            <h6 class="caption">Caption for Image 2</h6>
+                                            <img class="lazyOwl" data-src='@Url.Content("~/Content/Images/bg2.jpg")' alt=""/>
+                                        </div>
+
+                                        <div>
+                                            <h6 class="caption">Caption for Image 3</h6>
+                                            <img class="lazyOwl" data-src='@Url.Content("~/Content/Images/bg3.jpg")' alt=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <article class="feature-col col-md-4">
+                                <a href="" onclick="populate_and_open_modal(event, 'modal-content-6');" class="thumbnail linked">
+                                    <div class="image-container">
+                                        <img src='@Url.Content("~/Content/Images/project-2.jpg")' data-img-src='@Url.Content("~/Content/Images/project-2.jpg")' class="item-thumbnail" alt=""/>
+                                    </div>
+                                    <div class="caption">
+                                        <h5>Text popup</h5>
+                                        <p>This feature contains generic image and text content when you open popup.</p>
+                                    </div>
+                                </a>
+
+                                <div class="content-to-populate-in-modal" id="modal-content-6">
+                                    <img src='@Url.Content("~/Content/Images/top-image2.jpg")' data-img-src='@Url.Content("~/Content/Images/top-image2.jpg")' class="full-width" alt=""/>
+                                    <h1>Sed scelerisque</h1>
+                                    <p>
+                                        Nullam ac rhoncus. Aliquam adipiscing eros non
+                                        elit imperdiet congue. Etiam at ligula sit amet arcu laoreet consequat.
+                                        Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse
+                                        molestie lorem odio, sit amet.
+                                    </p>
+                                    <p>Laoreet consequat. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio, sit amet.</p>
+                                    <p>
+                                        Suspendisse molestie lorem odio, sit amet. Duis
+                                        dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse
+                                        molestie lorem odio test.
+                                    </p>
+                                </div>
+                            </article>
+
+
+                            <article class="feature-col col-md-4">
+                                <a href="" onclick="populate_and_open_modal(event, 'modal-content-8', '', 'full-size');" class="thumbnail linked">
+                                    <div class="image-container">
+                                        <img src='@Url.Content("~/Content/Images/project-4.jpg")' data-img-src='@Url.Content("~/Content/Images/project-4.jpg")' class="item-thumbnail" alt=""/>
+                                    </div>
+                                    <div class="caption">
+                                        <h5>Alternate Gallery</h5>
+                                        <p>Inside this feature's popup you'll find an alternative version of an image gallery.</p>
+                                    </div>
+                                </a>
+
+                                <div class="content-to-populate-in-modal" id="modal-content-8">
+                                    <h1>Sed scelerisque</h1>
+                                    <p>
+                                        Nullam ac rhoncus. Aliquam adipiscing eros non
+                                        elit imperdiet congue. Etiam at ligula sit amet arcu laoreet consequat.
+                                        Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse
+                                        molestie lorem odio, sit amet. Adipiscing eros non elit imperdiet congue
+                                        tiam at ligula sit amet arcu.
+                                    </p>
+
+
+                                    <div id="unique-id-for-alt-image-slider" class="owl-carousel popup-alt-image-gallery">
+                                        <div class="item"><a href='@Url.Content("~/Content/Images/bg1.jpg")' data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src='@Url.Content("~/Content/Images/gallery-thumb-1.jpg")' alt=""/></a></div>
+                                        <div class="item"><a href='@Url.Content("~/Content/Images/bg2.jpg")' data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src='@Url.Content("~/Content/Images/gallery-thumb-2.jpg")' alt="" /></a></div>
+                                        <div class="item"><a href='@Url.Content("~/Content/Images/bg3.jpg")' data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src='@Url.Content("~/Content/Images/gallery-thumb-3.jpg")' alt="" /></a></div>
+                                        <div class="item"><a href='@Url.Content("~/Content/Images/bg4.jpg")' data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src='@Url.Content("~/Content/Images/gallery-thumb-4.jpg")' alt="" /></a></div>
+                                        <div class="item"><a href='@Url.Content("~/Content/Images/bg5.jpg")' data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src='@Url.Content("~/Content/Images/gallery-thumb-5.jpg")' alt="" /></a></div>
+                                        <div class="item"><a href='@Url.Content("~/Content/Images/bg6.jpg")' data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src='@Url.Content("~/Content/Images/gallery-thumb-6.jpg")' alt="" /></a></div>
+                                        <div class="item"><a href='@Url.Content("~/Content/Images/bg1.jpg")' data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src='@Url.Content("~/Content/Images/gallery-thumb-2.jpg")' alt="" /></a></div>
+                                        <div class="item"><a href='@Url.Content("~/Content/Images/bg3.jpg")' data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src='@Url.Content("~/Content/Images/gallery-thumb-3.jpg")' alt="" /></a></div>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </section>
+
+
+                    </div>
+                </div>
+            </article>
+
+            <article id="blog" class="section-wrapper clearfix" data-custom-background-img='@Url.Content("~/Content/Images/bg2.jpg")'>
+                <div style="position: absolute;" class="content-wrapper clearfix">
+                    <div class="col-sm-11 col-md-10 pull-right">
+
+                        <h1 class="section-title">Blog</h1>
+
+
+                        <section class="grid row clearfix clearfix-for-2cols">
+
+
+                            <div class="grid-item col-md-6">
+                                <div class="item-content clearfix">
+                                    <span class="icon glyphicon glyphicon-stats"></span>
+                                    <div class="text-content">
+                                        <h5>Here are some ideas</h5>
+                                        <p>Nullam ac rhoncus sapien, non gravida purus. Aliquam adipiscing eros non elit imperdiet congue. Integer ultricies.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid-item col-md-6">
+                                <div class="item-content clearfix">
+                                    <span class="icon glyphicon glyphicon-record"></span>
+                                    <div class="text-content">
+                                        <h5>Aliquam adipiscing eros non elit</h5>
+                                        <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
+                                    </div>
+                                </div>
+                            </div><article class="clearfix"></article>
+
+                            <div class="grid-item col-md-6">
+                                <div class="item-content clearfix">
+                                    <span class="icon glyphicon glyphicon-lock"></span>
+                                    <div class="text-content">
+                                        <h5>Integer ultricies sed ligula</h5>
+                                        <p>Aliquam adipiscing eros non elit imperdiet congue. Integer ultricies sed ligula ligula eget.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid-item col-md-6">
+                                <div class="item-content clearfix">
+                                    <span class="icon glyphicon glyphicon-file"></span>
+                                    <div class="text-content">
+                                        <h5>Lorem ipsum dolor sit amet</h5>
+                                        <p>Nullam ac rhoncus. Aliquam adipiscing eros non elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
+                                    </div>
+                                </div>
+                            </div><article class="clearfix"></article>
+
+                        </section>
+
+                    </div>
+                </div>
+            </article>
+
+            <article id="contact" class="section-wrapper clearfix" data-custom-background-img='@Url.Content("~/Content/Images/bg4.jpg")'>
+                <div style="position: absolute;" class="content-wrapper clearfix">
+                    <div class="col-sm-11 col-md-10 pull-right">
+
+                        <h1 class="section-title">Contact</h1>
+
+
+                        <div class="contact-details col-sm-5 col-md-3">
+                            <p>1028<br/>Queen St. East,<br/>Toronto, ON<br/>M4M 1K4</p>
+                            <p>Tel: 416.923.4031</p>
+                            <p>Subway: Leslieville</p>
+                            <p><a href="mailto:info@mjggallery.com">info@mjggallery.com</a></p>
+                        </div>
+
+                        <div class="col-sm-7 col-md-9">
+                            <form class="form-style validate-form clearfix" action='@Url.Action("Mail","Account")' method="POST" role="form">
+
+                                <!-- form left col -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="text-field form-control validate-field required" data-validation-type="string" id="fullName" placeholder="Full Name" name="fullName" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="text-field form-control validate-field required" data-validation-type="email" id="emailAddress" placeholder="Email Address" name="emailAddress" type="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="text-field form-control validate-field phone" data-validation-type="phone" id="contactNumber" placeholder="Contact Number" name="contactNumber" type="tel">
+                                    </div>
+                                    <div class="form-group text-right">
+                                        <img id="form-captcha-img" src="@Url.Content("~/Content/Images/captcha/captcha1.png")" alt=""/>
+                                        <input class="text-field form-control validate-field required" data-validation-type="captcha" id="captchaEntry" placeholder="Enter text" name="captchaEntry" type="text">
+                                        <span id="form-captcha-refresh" class="fa fa-refresh" title="Reload"></span>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea placeholder="Message..." class="form-control validate-field required" name="message"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <img src="@Url.Content("~/Content/Images/Process/swim12.gif")" class="form-loader" alt=""/>
+                                        <button type="submit" class="btn btn-sm btn-outline-inverse">Submit</button>
+                                    </div>
+                                    <div class="form-group form-general-error-container"></div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+ 
+        </section>
+
+        <section id="footer">
+            
+            <div id="go-to-top" onclick="scroll_to_top();"><span class="icon glyphicon glyphicon-chevron-up"></span></div>
+
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/pages/MJG-Gallery-by-Mark-Jeremy-Gleberzon/238062092892271" target="_blank" title="Facebook"><img src='@Url.Content("~/Content/MJGLight/Images/facebook.jpg")' alt="Facebook"></a></li>
+                <li><a href="https://twitter.com/mjggallery" target="_blank" title="Twitter"><img src='@Url.Content("~/Content/MJGLight/Images/twitter.png")' alt="Twitter"></a></li>
+                <li><a href="http://instagram.com/mjggallery/" target="_blank" title="Instagram"><img src='@Url.Content("~/Content/MJGLight/Images/instagram.jpg")' alt="Google+"></a></li>
+                <li><a href="https://www.pinterest.com/markaloo/" target="_blank" title="Pinterest"><img src='@Url.Content("~/Content/MJGLight/Images/pinterest.jpg")' alt="Google+"></a></li>
+            </ul>
+
+            <div class="footer-text-line">© 2014 MJG Gallery</div>
+        </section>
+
+    </div>
+    <div style="display: block;" class="modal fade in" id="common-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: none;" id="lightboxOverlay" class="lightboxOverlay"></div>
+    <div style="display: none;" id="lightbox" class="lightbox">
+        <div class="lb-outerContainer">
+            <div class="lb-container">
+                <img class="lb-image" src="">
+                <div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div>
+                <div class="lb-loader"><a class="lb-cancel"></a></div>
+            </div>
+        </div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div>
+    </div>
+    @Scripts.Render("~/bundles/scriptsMJG")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

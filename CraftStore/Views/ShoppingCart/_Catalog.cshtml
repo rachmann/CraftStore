@@ -1,0 +1,76 @@
+﻿@model CraftStore.Models.ShoppingCartViewModel
+<div class="sc-panel" id="productList">
+
+    <p class="sc-tool sc-result-count" id="sc-item-total">
+        @{
+            var resultCntTxt = "Showing";
+            if (Model.TotalCount == Model.Items.Count())
+            {
+                resultCntTxt += string.Format(" all {0} results", Model.TotalCount);
+            }
+            else
+            {
+                resultCntTxt += string.Format(" {0} of {1} items", Model.Items.Count(), Model.TotalCount);
+            }
+        }
+
+    </p>
+    <ul class="sc-products">
+        @{
+            var columcnt = -1;
+
+        }
+        @foreach (var item in Model.Items)
+        {
+            var itemClass = "sc-product";
+            var ratingText = string.Format("Rated {0} out of 5", item.Rating);
+
+            columcnt++;
+
+            if (item.DiscountPrice > 0)
+            {
+                itemClass += " sale";
+            }
+            if (item.Quantity > 0)
+            {
+                itemClass += " instock";
+            }
+
+            var ratingStyle = string.Format("width: {0:p}", Math.Round(@item.Rating / 5, 1)).Replace(" ", string.Empty);
+
+            <li class="@itemClass">
+
+                <a href="@Url.Action("Details", new{id=item.Id})">
+                    @if (item.DiscountPrice > 0)
+                    {
+                        <span class="onsale">Sale!</span>
+                    }
+                    @{ var imagePath = string.Format("~/Content/Images/Products/{0}", item.Image);}
+                    <div class="sc-image-box">
+                        <img class="sc-image-post" alt="@item.Name" src="@Url.Content(@imagePath)">
+                    </div>
+                    <div class="sc-item-name"><h3>@item.Name</h3></div>
+
+                    <div title="@ratingText" class="sc-rating-box">
+
+                        <span style="@ratingStyle">
+                            @*<strong>@item.Rating.ToString()</strong>
+                                out of 5*@
+                        </span>
+                    </div>
+                    @if (item.DiscountPrice > 0)
+                    {
+                        <span class="sc-price sc-price-discount"><del><span class="sc-amount">@item.Price.ToString("C")</span></del> <ins><span class="sc-amount">@item.DiscountPrice.ToString("C")</span></ins></span>
+                    }
+                    else
+                    {
+                        <span class="sc-price"><span class="sc-amount">@item.Price.ToString("C")</span></span>
+                    }
+                </a>
+                <a class="button sc-button-add-to-cart" href="@Url.Action("AddToCart", "ShoppingCart", new{ id=Model.Id})" rel="nofollow" data-product_sku="" data-product_id="@item.Id">Add to cart</a>
+            </li>
+        }
+    </ul>
+</div>
+
+

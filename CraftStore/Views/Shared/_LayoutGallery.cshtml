@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - MJG Gallery</title>
+
+    @Styles.Render("~/Content/cssMJGLight")
+    @Styles.Render("~/Content/wow")
+
+    <script type="text/javascript">
+    function stopvid() {
+        var mediaElement = document.getElementsByClassName("myMediaElementID");
+        mediaElement.each(function () {
+            $(this).pause();
+            $(this).removeAttribute("src");
+            //or
+            //$(this).src = '';
+        });
+    }
+    </script>
+
+</head>
+<body>
+
+    <div id="outer-wrap">
+        <div id="inner-wrap">
+            <!--start: sidebar -->
+            <div class="span2">
+                <div class="sidebar-style sidebar-nav sidebar-nav-fixed" id="top">
+                    <div class="block logo">
+                        <!-- Logo -->
+                        <a class="block-title" href="@Url.Action("Index","Gallery")">MJG Gallery<i class="icon-plus-sign"></i></a>
+                        <a class="nav-btn" id="nav-open-btn" href="@Url.Action("Index", "Gallery")" data-icon="icon-lightbulb"><i class="icon-reorder icon-2x"></i></a>
+                    </div>
+                    <div class="baseline-border">
+                        <div class="baseline">
+                            <p>Paintings and photographic works, catering to Cabbagetown collectors.</p>
+                            <p>In-studio workshops and art history lectures are offered.</p>
+                        </div>
+                    </div><nav id="nav" role="navigation">
+                        <div class="block">
+                            <ul>
+                                <li class="is-active">@Html.ActionLink("Home","Index","Gallery",null, new { @Class="home"})</li>
+                                <li >@Html.ActionLink("About", "About","Gallery", null, new { @Class = "about" })</li>
+                                <li >@Html.ActionLink("Work", "Work","Gallery",  null, new { @Class = "work" })</li>
+                                <li >@Html.ActionLink("Portofolio", "Portofolio", "Gallery",null, new { @Class = "portofolio" })</li>
+                                <li>@Html.ActionLink("Blog", "Blog","Gallery", null, new { @Class = "services" })</li>
+                                <li >@Html.ActionLink("Contact", "Contact", "Gallery",null, new { @Class = "contact" })</li>
+                            </ul><a class="close-btn" id="nav-close-btn" href="#top">
+                                <i class="icon-remove icon-2x icon-border"></i>
+                            </a>
+                        </div>
+                    </nav>
+                    <div class="social">
+                        <a href="https://www.facebook.com/pages/MJG-Gallery-by-Mark-Jeremy-Gleberzon/238062092892271"><i class="icon-facebook"></i></a>
+                        <a href="https://twitter.com/mjggallery"><i class="icon-twitter"></i></a>
+                        <a href="http://instagram.com/mjggallery/"><i class="icon-camera-retro"></i></a>
+                        <a href="https://www.pinterest.com/markaloo/"><i class="icon-pinterest-sign"></i></a>
+                    </div>
+                </div>
+            </div><!--end: sidebar -->
+            <!--start: content -->
+            <div class="content">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/scriptsMJGLight")
+    @Scripts.Render("~/bundles/wow")
+    
+    @RenderSection("scripts", required: false)
+</body>
+</html>
